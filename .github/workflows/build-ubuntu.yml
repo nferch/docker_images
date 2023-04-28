@@ -30,6 +30,10 @@ env:
   PUSH_DOCKER_HUB: ${{ secrets.DOCKER_USER && secrets.DOCKER_TOKEN && '1' || '' }}
   LATEST_TAG: 22.04
 
+permissions:
+  contents: read
+  packages: write
+
 defaults:
   run:
     shell: sh
