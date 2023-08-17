@@ -35,7 +35,9 @@ jobs:
   build-base:
     name: Build base ${{ matrix.TAG }}
     runs-on: ubuntu-latest
-    permissions: write-all
+    permissions:
+      contents: read
+      packages: write
     env:
       PLATFORMS: ${{ matrix.PLATFORMS }}
     strategy:
