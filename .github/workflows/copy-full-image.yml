@@ -15,6 +15,10 @@ env:
   PUSH_QUAY: ${{ secrets.QUAY_USER && secrets.QUAY_TOKEN && '1' || '' }}
   PUSH_DOCKER_HUB: ${{ secrets.DOCKER_USER && secrets.DOCKER_TOKEN && '1' || '' }}
 
+permissions:
+  contents: read
+  packages: write
+
 defaults:
   run:
     shell: sh
